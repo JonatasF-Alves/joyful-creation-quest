@@ -12,7 +12,7 @@ function contextoDePreview(): boolean {
   if (lovable && /^project--.+-dev$/.test(label)) return true;
   if (/(^|\.)lovableproject(-dev)?\.com$/.test(h)) return true;
   if (/(^|\.)beta\.lovable\.dev$/.test(h)) return true;
-  if (new URLSearchParams(window.location.search).get("sw") ?? "" === "off") return true;
+  if (new URLSearchParams(window.location.search).get("sw") === "off") return true;
   return false;
 }
 
