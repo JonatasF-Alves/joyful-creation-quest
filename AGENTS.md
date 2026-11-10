@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- PWA: manifest-only + hand-written push-only `public/sw.js` (no caching), registered via `src/lib/notificacoes/registrar-sw.ts` which refuses dev/preview hosts — avoids stale caches; push sending is a later step (`inscrever-push.ts`).
+- No auth by user request: `compromissos` is open to anon via RLS.
